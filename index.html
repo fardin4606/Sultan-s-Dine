@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sultan's Dine | Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #e76f51;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #e76f51;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '• ';
+      color: #e76f51;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    #scrollToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      background: #e76f51;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      display: none;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sultan's Dine</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+  <div class="slider-container">
+    <img src="kacchi biriyani.jpg" class="slide active" alt="Kacchi Biryani">
+    <img src="Beef Rezala.jpeg" class="slide" alt="Beef Rezala">
+    <img src="Roshogolla.jpeg" class="slide" alt="Roshogolla">
+  </div>
+
+  <main>
+    <h2>Welcome to Sultan's Dine</h2>
+    <p>Founded in 2015, Sultan's Dine is a premier catering service in the heart of Dhaka. We blend tradition with flavor to serve memorable dishes at every event — weddings, birthdays, corporate lunches, and more.</p>
+
+    <h2>Meet Our Team</h2>
+    <ul>
+      <li><strong>Saif:</strong> Head Chef & Founder</li>
+      <li><strong>Sara:</strong> Event Coordinator</li>
+      <li><strong>Ahmed:</strong> Sous Chef</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sultan's Dine. All rights reserved.</p>
+  </footer>
+
+  <button id="scrollToTop">↑</button>
+
+  <script>
+    // Image Slider
+    const slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    setInterval(nextSlide, 3000);
+
+    // Scroll to top
+    const scrollBtn = document.getElementById('scrollToTop');
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    };
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+
+</body>
+</html>

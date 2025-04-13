@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Fardin's Kitchen</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #e76f51;
+      padding: 15px;
+      text-align: center;
+      color: white;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #e76f51;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .gallery-item p {
+      margin: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fardin's Kitchen</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Gallery of Our Signature Dishes</h2>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="kacchi biriyani.jpg" alt="Kacchi Biryani">
+        <p>Kacchi Biryani</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Beef Rezala.jpeg" alt="Beef Rezala">
+        <p>Beef Rezala</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Chicken Roast.jpeg" alt="Chicken Roast">
+        <p>Chicken Roast</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Firni.jpeg" alt="Firni">
+        <p>Firni</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Egg Fried Rice.jpeg" alt="Egg Fried Rice">
+        <p>Egg Fried Rice</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Morog Polao.jpeg" alt="Morog Polao">
+        <p>Morog Polao</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Shorshe Ilish.jpeg" alt="Shorshe Ilish">
+        <p>Shorshe Ilish</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Roshogolla.jpeg" alt="Roshogolla">
+        <p>Roshogolla</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fardin’s Kitchen. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
